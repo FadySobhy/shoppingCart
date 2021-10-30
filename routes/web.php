@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/add-item-to-cart', 'HomeController@addItemToCart')->name('cart.add-item');
+Route::get('/checkout', 'CheckoutController@checkout')->name('checkout');
